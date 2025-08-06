@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Düğün Fotoğraf Yükleme</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Düğün Fotoğraflarınızı Yükleyin!</h1>
+    <p>Bu sayfaya fotoğraf ve video yükleyerek, düğün anılarımızı bizimle paylaşabilirsiniz!</p>
+  </header>
+
+  <main>
+    <form id="uploadForm" enctype="multipart/form-data">
+      <label for="fileInput">Fotoğraf veya Video Yükleyin:</label>
+      <input type="file" id="fileInput" name="file" accept="image/*, video/*" required>
+      <button type="submit">Yükle</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Düğün Fotoğraf Yükleme Sistemi</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
