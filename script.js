@@ -11,7 +11,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
   formData.append('file', fileInput.files[0]);
 
   try {
-    const response = await fetch('https://wedding-backend-6emkrl9ds-hakans-projects-8baa0f26.vercel.app/api/upload', {  // Vercel’deki URL'ni buraya yaz
+    const response = await fetch('https://wedding-backend-ekm1rw1x1-hakans-projects-8baa0f26.vercel.app/api/upload', {  // Vercel’deki URL'ni buraya yaz
       method: 'POST',
       body: formData,
     });
