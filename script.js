@@ -10,8 +10,8 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
   const formData = new FormData();
   formData.append('file', fileInput.files[0]);
 
-  try {
-    const response = await fetch('https://wedding-uploader-seven.vercel.app/api/upload', {  // Vercel’deki URL'ni buraya yaz
+  try { 
+    const response = await fetch('https://wedding-backend-nine-flax.vercel.app/api/upload', {  // Vercel’deki URL'ni buraya yaz
       method: 'POST',
       body: formData,
     });
