@@ -2,8 +2,10 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const fileInput = document.getElementById('file');
-  if (fileInput.files.length === 0) {
-    alert('Lütfen bir dosya seçin!');
+  const statusMessage = document.getElementById('statusMessage');
+
+  if (!fileInput.files.length) {
+    statusMessage.textContent = "Lütfen bir dosya seçin.";
     return;
   }
 
@@ -11,19 +13,19 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
   formData.append('file', fileInput.files[0]);
 
   try {
-    const response = await fetch('https://wedding-backend-ekm1rw1x1-hakans-projects-8baa0f26.vercel.app/api/upload', {  // Vercel’deki URL'ni buraya yaz
+    const response = await fetch('https://wedding-backend-ekm1rw1x1-hakans-projects-8baa0f26.vercel.app/api/upload', {
       method: 'POST',
       body: formData,
     });
 
-    const data = await response.json();
-
     if (response.ok) {
-      alert('Dosya başarıyla yüklendi!');
+      statusMessage.textContent = "✅ Dosya başarıyla yüklendi!";
+      fileInput.value = ''; // Reset input
     } else {
-      alert('Yükleme başarısız: ' + (data.message || 'Bilinmeyen hata'));
+      statusMessage.textContent = "❌ Yükleme başarısız. Tekrar deneyin.";
     }
   } catch (error) {
-    alert('Yükleme sırasında hata oluştu: ' + error.message);
+    console.error(error);
+    statusMessage.textContent = "❌ Sunucuya erişilemedi.";
   }
 });
