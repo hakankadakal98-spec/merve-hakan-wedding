@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +23,26 @@ body {
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Bride & Groom Photo Placeholder */
+.photo-section {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.photo-section img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  background-color: #eee;
+}
+
+.photo-section p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
 }
 
 header h1 {
@@ -53,6 +73,12 @@ input[type="file"] {
   background-color: #fff8f1;
   color: #333;
   cursor: pointer;
+}
+
+#fileCount {
+  font-size: 0.85rem;
+  color: #888;
+  text-align: center;
 }
 
 button {
