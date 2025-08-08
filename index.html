@@ -2,13 +2,20 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Düğün Fotoğraf Yükleme</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <div class="container">
+
+    <!-- Bride & Groom Photo Placeholder -->
+    <section class="photo-section">
+      <img src="placeholder.jpg" alt="Gelin ve Damat" id="weddingPhoto" />
+      <p>📸 Gelin ve damadın fotoğrafı burada yer alacak.</p>
+    </section>
+
     <header>
       <h1>Düğün Fotoğraflarınızı Paylaşın 💕</h1>
       <p>Bu özel günü ölümsüzleştirmek için çektiğiniz fotoğraf veya videoları yükleyin.</p>
@@ -16,7 +23,8 @@
 
     <main>
       <form id="uploadForm">
-        <input type="file" id="file" name="file" required />
+        <input type="file" id="file" name="file" multiple required />
+        <p id="fileCount">Hiç dosya seçilmedi.</p>
         <button type="submit">📤 Yükle</button>
         <p id="statusMessage"></p>
       </form>
@@ -25,6 +33,7 @@
     <footer>
       <p>&copy; 2025 Hakan & Eşinin Düğünü</p>
     </footer>
+
   </div>
 
   <script src="script.js"></script>
