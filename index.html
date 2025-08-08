@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Düğün Fotoğraf Yükleme</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Düğün Fotoğraflarınızı Yükleyin!</h1>
-    <p>Bu sayfaya fotoğraf ve video yükleyerek, düğün anılarımızı bizimle paylaşabilirsiniz!</p>
-  </header>
+  <div class="container">
+    <header>
+      <h1>Düğün Fotoğraflarınızı Paylaşın 💕</h1>
+      <p>Bu özel günü ölümsüzleştirmek için çektiğiniz fotoğraf veya videoları yükleyin.</p>
+    </header>
 
-  <main>
-    <form id="uploadForm">
-      <label for="fileInput">Fotoğraf veya Video Yükleyin:</label>
-      <input type="file" id="file" name="file" required />
-      <button type="submit">Yükle</button>
-    </form>
-  </main>
+    <main>
+      <form id="uploadForm">
+        <input type="file" id="file" name="file" required />
+        <button type="submit">📤 Yükle</button>
+        <p id="statusMessage"></p>
+      </form>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Düğün Fotoğraf Yükleme Sistemi</p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 Hakan & Eşinin Düğünü</p>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
