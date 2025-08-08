@@ -34,7 +34,7 @@ body {
 .photo-section img {
   width: 100%;
   max-height: 200px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 12px;
   background-color: #eee;
 }
