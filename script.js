@@ -24,9 +24,10 @@ form.addEventListener('submit', async (e) => {
   }
 
   try {
-    const response = await fetch('https://wedding-backend-ekm1rw1x1-hakans-projects-8baa0f26.vercel.app/api/upload', {
+    const response = await fetch('http://localhost:3000/api/upload ', {
       method: 'POST',
       body: formData,
+      // http://localhost:3000 https://wedding-backend-ekm1rw1x1-hakans-projects-8baa0f26.vercel.app/api/upload
     });
 
     if (response.ok) {
